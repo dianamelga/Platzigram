@@ -1,6 +1,5 @@
 package com.platzi.platzigram.view;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -10,7 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.platzi.platzigram.R;
-import com.platzi.platzigram.view.fragment.HomeFragment;
+import com.platzi.platzigram.post.view.HomeFragment;
 import com.platzi.platzigram.view.fragment.ProfileFragment;
 import com.platzi.platzigram.view.fragment.SearchFragment;
 

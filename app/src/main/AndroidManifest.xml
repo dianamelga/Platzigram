@@ -3,6 +3,10 @@
     package="com.platzi.platzigram">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera2" android:required="false"/>
+    <!--uses-feature android:required="false"/-->
 
     <application
         android:allowBackup="true"
@@ -29,14 +33,14 @@
             android:label="@string/title_activity_referencia"
             android:theme="@style/AppTheme" />
         <activity android:name=".view.ContainerActivity" />
-        <activity android:name=".view.PictureDetailActivity"
-
+        <activity
+            android:name=".view.PictureDetailActivity"
             android:parentActivityName=".view.ContainerActivity">
             <meta-date
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.ContainerActivity" />
-
         </activity>
+        <activity android:name=".post.view.NewPostActivity"></activity>
     </application>
 
 </manifest>

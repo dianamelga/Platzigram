@@ -20,4 +20,8 @@
     <string name="secondWordDetail">Likes</string>
     <string name="titleImageDetail">\"Todo copas en la playa\"</string>
     <string name="hint_search">Search</string>
+    <string name="toastLoginError">Something happend. </string>
+    <string name="hint_title">Titulo</string>
+    <string name="hint_description">Descripcion</string>
+    <string name="text_button_create_post">Crear Post</string>
 </resources>
