@@ -12,6 +12,7 @@ import com.squareup.picasso.Picasso;
 public class NewPostActivity extends AppCompatActivity {
     private ImageView imgPhoto;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
