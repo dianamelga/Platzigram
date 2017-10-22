@@ -27,4 +27,9 @@
     <string name="username_profile">Diana Melgarejo</string>
     <string name="transitionname_picture">transitionnamepicture</string>
     <string name="hint_search">Search</string>
+    <string name="toastLogin">No puede dejar el usuario o contraseña vacíos</string>
+    <string name="toastLoginError">Ha ocurrido un error. </string>
+    <string name="hint_title">Titulo</string>
+    <string name="hint_description">Descripcion</string>
+    <string name="text_button_create_post">Crear Post</string>
 </resources>

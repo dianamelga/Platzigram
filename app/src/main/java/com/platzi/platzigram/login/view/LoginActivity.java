@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.platzi.platzigram.R;
+import com.platzi.platzigram.login.presenter.LoginPresenter;
+import com.platzi.platzigram.login.presenter.LoginPresenterImpl;
 import com.platzi.platzigram.view.ContainerActivity;
 import com.platzi.platzigram.view.CreateAccountActivity;
 
@@ -19,6 +22,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private TextInputEditText password;
     private Button login;
     private ProgressBar progressBarLogin;
+    private LoginPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,23 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         password = (TextInputEditText) findViewById(R.id.password);
         login = (Button) findViewById(R.id.login);
         progressBarLogin = (ProgressBar) findViewById(R.id.progressbarLogin);
+
+        presenter = new LoginPresenterImpl(this);
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (username.equals("") || password.equals("")) {
+                    String toastLogin = getResources().getText(R.string.toastLogin).toString();
+                    Toast.makeText(v.getContext(), toastLogin , Toast.LENGTH_SHORT).show();
+                }else {
+                    presenter.signIn(username.getText().toString(), password.getText().toString());
+
+                }
+            }
+        });
+
+        hideProgressBar();
     }
 
     @Override
@@ -56,7 +77,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     @Override
     public void loginError(String error) {
-
+        String toastLoginError = getResources().getText(R.string.toastLoginError).toString();
+        Toast.makeText(this, toastLoginError, Toast.LENGTH_SHORT).show();
     }
 
     @Override
